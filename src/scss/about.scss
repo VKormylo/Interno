@@ -1,0 +1,328 @@
+// ----------------------------------------------------
+// ------------------ ABOUT-MAIN ------------------
+// ----------------------------------------------------
+
+.about-main {
+    &__container {
+        display: flex;
+        column-gap: 75px;
+        align-items: center;
+    }
+    &__content {
+        flex: 0 1 480px;
+    }
+    &__text {
+        margin-top: 32px;
+        margin-bottom: 46px;
+        color: $greyColor;
+    }
+    &__call {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+    }
+    &__phone {
+        padding: 30px;
+        border-radius: 50%;
+        background-color: $tertiaryColor;
+    }
+    &__info {
+        line-height: 1.5;
+        p {
+            color: $greyColor;
+            text-transform: capitalize;
+        }
+    }
+    &__number {
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: $greyColor;
+    }
+    &__button {
+        margin-top: 46px;
+    }
+    &__image {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 653px;
+        height: 700px;
+        border-radius: 0 326px 0 123px;
+        overflow: hidden;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .about-main {
+        &__container {
+            flex-direction: column;
+            row-gap: 48px;
+        }
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .about-main {
+        &__button {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+// ----------------------------------------------------
+// ------------------ ABOUT PAGE ------------------
+// ----------------------------------------------------
+
+// REVIEW SECTION
+.review {
+    &__container {
+        display: flex;
+        justify-content: center;
+    }
+    &__body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 428px;
+        text-align: center;
+        span {
+            font-size: 85px;
+            font-style: italic;
+            color: $mainColor;
+            font-family: $fontFamilyDM;
+        }
+    }
+    &__quote {
+        font-family: $fontFamilyDM;
+        font-size: 35px;
+        line-height: 1.25;
+        max-width: 720px;
+        font-style: italic;
+    }
+    &__author {
+        bottom: 86px;
+        font-size: 25px;
+        line-height: 1.5;
+        color: $greyColor;
+        margin-top: 34px;
+    }
+}
+
+// WORK SECTION
+.work {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 150px;
+    }
+    .item-work {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 41px;
+        &__content {
+            flex: 0 1 450px;
+        }
+        &__text {
+            color: $greyColor;
+            line-height: 1.5;
+            margin-top: 23px;
+            margin-bottom: 42px;
+        }
+        &__image {
+            border-radius: 70px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .work {
+        &__container {
+            row-gap: 100px;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .work,
+    .work.work__service {
+        .item-work {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 41px;
+            flex-direction: column;
+            &__content {
+                flex-basis: auto;
+                margin-bottom: 48px;
+            }
+            &__image {
+                order: 2;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .work {
+        &__container {
+            row-gap: 70px;
+        }
+        .item-work {
+            &__button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------
+// ------------------ PRICING ------------------
+// ----------------------------------------------------
+
+.pricing {
+    margin-bottom: 150px;
+    &__items {
+        display: flex;
+        column-gap: 48px;
+    }
+    .item-pricing {
+        position: relative;
+        border-radius: 33px;
+        background-color: $tertiaryColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 64px 45px;
+        text-align: center;
+        width: 368px;
+        &:nth-of-type(2) {
+            .item-pricing__price::after {
+                background-color: $mainColor;
+            }
+            .item-pricing__dollars span {
+                color: $secondaryColor;
+            }
+            .item-pricing__products::before {
+                content: "Most Popular Plans";
+                position: absolute;
+                font-weight: 600;
+                color: #fff;
+                font-size: 18px;
+                line-height: 1.25;
+                padding: 10px 38px;
+                border-radius: 18px;
+                background-color: $mainColor;
+                transform: translateY(-59px);
+            }
+        }
+        &__price {
+            font-family: $fontFamilyDM;
+            font-size: 25px;
+            margin-top: 18px;
+            margin-bottom: 75px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                transform: translateY(37px);
+                background-color: $secondaryColor;
+                width: 100%;
+                height: 1px;
+            }
+        }
+        &__dollars {
+            span {
+                font-size: 85px;
+            }
+            margin-bottom: 4px;
+        }
+        &__products {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+        }
+        &__product {
+            font-size: 20px;
+            color: $greyColor;
+        }
+        &__button {
+            margin-top: 28px;
+            padding: 26px 73px 26px 48px;
+        }
+    }
+}
+
+@media (max-width: 1070px) {
+    .pricing {
+        .item-pricing {
+            padding: 32px 25px;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .pricing {
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 48px;
+        }
+        .item-pricing {
+            padding: 64px 35px;
+            justify-self: center;
+            max-width: 100%;
+            width: 100%;
+        }
+        .item-pricing:last-child {
+            grid-column: span 2;
+            width: 50%;
+            justify-self: center;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .pricing {
+        &__items {
+            grid-template-columns: 1fr;
+        }
+        .item-pricing {
+            width: 80%;
+        }
+        .item-pricing:last-child {
+            grid-column: span 1;
+            width: 80%;
+            justify-self: flex-start;
+        }
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .pricing {
+        .item-pricing {
+            width: 100%;
+            padding: 32px 25px;
+        }
+        .item-pricing:last-child {
+            width: 100%;
+        }
+    }
+}

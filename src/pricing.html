@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("./html/head.html", { "title": "Interno" })
+  <body>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      @@include("./html/header.html", {})
+      <main class="page">
+        @@include("./html/hero-sub.html", { "name": "Pricing & Plan", "path":
+        "Pricing", photo: "pricing" })
+        <section class="pricing">
+          <div class="pricing__container">
+            <div class="pricing__items">
+              <div class="pricing__item item-pricing">
+                <h4 class="item-pricing__label">Design advices</h4>
+                <div class="item-pricing__price">
+                  <div class="item-pricing__dollars">$<span>29</span></div>
+                  <div>/month</div>
+                </div>
+                <ul class="item-pricing__products">
+                  <li class="item-pricing__product">
+                    General living space advices
+                  </li>
+                  <li class="item-pricing__product">Rennovation advices</li>
+                  <li class="item-pricing__product">Interior design advices</li>
+                  <li class="item-pricing__product">
+                    Furniture reorganization
+                  </li>
+                  <li class="item-pricing__product">Up to 5 hours meetings</li>
+                </ul>
+                <a href="#" class="item-pricing__button button button_secondary"
+                  >Get Started</a
+                >
+              </div>
+              <div class="pricing__item item-pricing">
+                <h4 class="item-pricing__label">Complete interior</h4>
+                <div class="item-pricing__price">
+                  <div class="item-pricing__dollars">$<span>39</span></div>
+                  <div>/month</div>
+                </div>
+                <ul class="item-pricing__products">
+                  <li class="item-pricing__product">Complete home redesign</li>
+                  <li class="item-pricing__product">
+                    Interior and exterior works
+                  </li>
+                  <li class="item-pricing__product">
+                    Modular interior planning
+                  </li>
+                  <li class="item-pricing__product">Kitchen design</li>
+                  <li class="item-pricing__product">Garages organization</li>
+                </ul>
+                <a href="#" class="item-pricing__button button button_default"
+                  >Get Started</a
+                >
+              </div>
+              <div class="pricing__item item-pricing">
+                <h4 class="item-pricing__label">Furniture design</h4>
+                <div class="item-pricing__price">
+                  <div class="item-pricing__dollars">$<span>59</span></div>
+                  <div>/month</div>
+                </div>
+                <ul class="item-pricing__products">
+                  <li class="item-pricing__product">
+                    Furniture for living room
+                  </li>
+                  <li class="item-pricing__product">Furniture refurbishment</li>
+                  <li class="item-pricing__product">Sofas and amchairs</li>
+                  <li class="item-pricing__product">Tables and chairs</li>
+                  <li class="item-pricing__product">Kitchens</li>
+                </ul>
+                <a href="#" class="item-pricing__button button button_secondary"
+                  >Get Started</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include("./html/footer.html", {})
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

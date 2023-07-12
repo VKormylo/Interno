@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("./html/head.html", { "title": "Interno" })
+  <body>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      @@include("./html/header.html", {})
+      <main class="page">
+        @@include("./html/hero-sub.html", { "name": "About Us", "path": "About Us", "photo": "about" })
+        <section class="review">
+          <div class="review__container">
+            <div class="review__body">
+              <span>“</span>
+              <div class="review__quote">
+                I like an interior that defies labeling. I don't really want
+                someone to walk into a room and know that I did it
+              </div>
+              <div class="review__author">-BUNNY WILLIAMS</div>
+            </div>
+          </div>
+        </section>
+        <section class="work">
+          <div class="work__container">
+            <div class="work__item item-work">
+              <div class="item-work__content">
+                <h2 class="item-work__title">What We Do</h2>
+                <div class="item-work__text">
+                  <p>
+                    It is a long established fact that a reader will be
+                    distracted by the of readable content of a page when
+                    lookings at its layouts the points of using that it has a
+                    more-or-less normal.
+                  </p>
+                </div>
+                <a href="faq.html" class="item-work__button button button_default"
+                  >Our Concept</a
+                >
+              </div>
+              <div class="item-work__image">
+                <img src="@img/about/work.jpg" alt="image" />
+              </div>
+            </div>
+            <div class="work__item item-work">
+              <div class="item-work__image">
+                <img src="@img/about/result.jpg" alt="image" />
+              </div>
+              <div class="item-work__content">
+                <h2 class="item-work__title">The End Result</h2>
+                <div class="item-work__text">
+                  <p>
+                    It is a long established fact that a reader will be
+                    distracted by the of readable content of a page when
+                    lookings at its layouts the points of using that it has a
+                    more-or-less normal.
+                  </p>
+                </div>
+                <a href="projects.html" class="item-work__button button button_default"
+                  >Our Portfolio</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include("./html/team-about.html", {})
+        @@include("./html/contact-project.html", {})
+      </main>
+      @@include("./html/footer.html", {})
+    </div>
+    <script src="js/app.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fc018a446d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

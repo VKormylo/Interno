@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("./html/head.html", { "title": "Interno" })
+  <body>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      @@include("./html/header.html", {})
+      <main class="page">
+        @@include("./html/hero-sub.html", { "name": "Contact Us", "path":
+        "Contact", photo: "contact" })
+        <section class="contact">
+          <div class="contact__container">
+            <h2 class="contact__title">
+              We love meeting new people and helping them.
+            </h2>
+            <div class="contact__content">
+              <div class="contact__info info-actions">
+                <div class="info-actions__email info-actions__item">
+                  <div>
+                    <img src="@img/icons/mail.svg" alt="icon" />
+                  </div>
+                  <a href="#">info@yourdomain.com</a>
+                </div>
+                <div class="info-actions__phone info-actions__item">
+                  <div>
+                    <img src="@img/icons/phone.svg" alt="icon" />
+                  </div>
+                  <a href="#">+1 (378) 400-1234</a>
+                </div>
+                <div class="info-actions__link info-actions__item">
+                  <div>
+                    <img src="@img/icons/globe.svg" alt="icon" />
+                  </div>
+                  <a href="#">www.yourdomain.com</a>
+                </div>
+                <div class="info-actions__social social">
+                  <a href="#" class="social__link fa-brands fa-facebook-f"></a>
+                  <a href="#" class="social__link fa-brands fa-twitter"></a>
+                  <a href="#" class="social__link fa-brands fa-linkedin-in"></a>
+                  <a href="#" class="social__link fa-brands fa-instagram"></a>
+                </div>
+              </div>
+              <form action="" class="contact__form contact-form">
+                <div class="contact-form__name contact-form__item">
+                  <input type="text" placeholder="Name" />
+                </div>
+                <div class="contact-form__email contact-form__item">
+                  <input type="text" placeholder="Email" />
+                </div>
+                <div class="contact-form__subject contact-form__item">
+                  <input type="text" placeholder="Subject" />
+                </div>
+                <div class="contact-form__phone contact-form__item">
+                  <input type="text" placeholder="Phone" />
+                </div>
+                <div class="contact-form__text contact-form__item">
+                  <textarea
+                    name="project"
+                    placeholder="Hello I am intrested in.."
+                  ></textarea>
+                </div>
+                <button
+                  class="contact-form__button button button_default"
+                  type="submit"
+                >
+                  Send Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="map">
+            <div class='map__container'>
+                <div class="map__image">
+                    <img src="@img/about/contact-map.jpg" alt="map">
+                </div>
+            </div>
+        </section>
+      </main>
+      @@include("./html/footer.html", {})
+    </div>
+    <script src="js/app.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fc018a446d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

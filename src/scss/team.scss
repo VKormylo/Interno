@@ -1,0 +1,432 @@
+// ----------------------------------------------------
+// ------------------ TEAM ------------------
+// ----------------------------------------------------
+
+.item-team {
+    position: relative;
+    max-width: 283px;
+    &__image {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        transition: all 0.3s ease-out 0s;
+    }
+    &__name {
+        font-family: $fontFamilyDM;
+        font-size: 25px;
+    }
+    &__job {
+        font-size: 18px;
+    }
+}
+
+.team-about {
+    background-color: $tertiaryColor;
+    padding: 185px 0;
+    &__title {
+        max-width: 550px;
+        text-align: center;
+        margin: 0 auto;
+    }
+    &__items {
+        display: flex;
+        margin-top: 40px;
+        column-gap: 22px;
+    }
+    .item-team {
+        border-radius: 30px;
+        overflow: hidden;
+        cursor: pointer;
+        &__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            line-height: 1.5;
+            z-index: 5;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease-out 0s;
+        }
+        &:hover {
+            .item-team__content {
+                opacity: 1;
+                pointer-events: all;
+            }
+            .item-team__image {
+                opacity: 0;
+            }
+        }
+
+        &__social {
+            display: flex;
+            align-items: center;
+            column-gap: 36px;
+            margin: 66px 0;
+            .social__link {
+                transition: all 0.2s ease-out 0s;
+                &:hover {
+                    color: $secondaryColor;
+                }
+            }
+        }
+        &__number,
+        &__email {
+            color: $greyColor;
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .team-about {
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 32px;
+        }
+        .item-team:nth-child(1),
+        .item-team:nth-child(3) {
+            justify-self: flex-end;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .team-about {
+        padding: 80px 0;
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .team-about {
+        .item-team {
+            &__social {
+                margin: 24px 0;
+                column-gap: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .team-about {
+        &__items {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+        .item-team:nth-child(1),
+        .item-team:nth-child(3) {
+            justify-self: center;
+        }
+    }
+}
+
+// ----------------------------------------------------
+// ------------------ TEAM PAGE ------------------
+// ----------------------------------------------------
+
+.team {
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 22px;
+        row-gap: 50px;
+    }
+    .item-team {
+        text-align: center;
+        &__image,
+        &__name {
+            cursor: pointer;
+        }
+        &__image {
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        &__name {
+            margin-top: 17px;
+            margin-bottom: 10px;
+        }
+        &__job {
+            margin-bottom: 16px;
+        }
+        &__social {
+            display: flex;
+            justify-content: center;
+            column-gap: 37px;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .team {
+        &__items {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .team {
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .team {
+        &__items {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            row-gap: 32px;
+        }
+    }
+}
+
+// ----------------------------------------------------
+// ------------------ TEAM MEMBER PAGE ------------------
+// ----------------------------------------------------
+
+.team-member {
+    &__general {
+        display: flex;
+        align-items: center;
+        column-gap: 59px;
+    }
+    &__image {
+        border-radius: 50px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__content {
+        flex: 0 1 552px;
+    }
+    &__job {
+        margin-top: 10px;
+        color: $greyColor;
+    }
+    &__text {
+        margin-top: 30px;
+        margin-bottom: 32px;
+        color: $greyColor;
+    }
+    .info-actions {
+        &__item {
+            div {
+                background-color: $tertiaryColor;
+            }
+        }
+    }
+    .member-biography {
+        margin-top: 100px;
+        &__text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            margin-top: 18px;
+            margin-bottom: 45px;
+            color: $greyColor;
+        }
+        &__info {
+            display: flex;
+            column-gap: 95px;
+        }
+    }
+    .member-skills {
+        max-width: 577px;
+        &__text {
+            display: flex;
+            flex-direction: column;
+            row-gap: 24px;
+            margin-top: 12px;
+            margin-bottom: 30px;
+            color: $greyColor;
+        }
+        &__items {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            max-width: 534px;
+        }
+        .skills-item {
+            position: relative;
+            &__name {
+                font-weight: 500;
+                color: $greyColor;
+                line-height: 1.5;
+                margin-bottom: 11px;
+            }
+            &__percents {
+                position: absolute;
+                top: 40%;
+                left: var(--percents);
+                transform: translate(-50%, -50%);
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 1.5;
+                color: $greyColor;
+            }
+            &__bar {
+                position: relative;
+                width: 100%;
+                height: 5px;
+                background-color: $tertiaryColor;
+                border-radius: 2px;
+            }
+            &__bar {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: $secondaryColor;
+                    width: var(--percents);
+                    height: 100%;
+                    border-radius: 4px;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: var(--percents);
+                    transform: translate(-50%, -50%);
+                    background-color: #fff;
+                    border: 5px solid $secondaryColor;
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                }
+            }
+            // &:nth-child(1) .skills-item__bar {
+            //     &::before {
+            //         width: attr(data-percents);
+            //     }
+            //     &::after {
+            //         left: attr(data-percents);
+            //     }
+            // }
+        }
+    }
+    .member-faq {
+        &__text {
+            margin-top: 12px;
+            margin-bottom: 19px;
+            color: $greyColor;
+            line-height: 1.5;
+        }
+        &__items {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+        .faq-item {
+            position: relative;
+            padding: 26px 22px;
+            border-radius: 18px;
+            border: 1px solid $secondaryColor;
+            cursor: pointer;
+            &__title {
+                position: relative;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 1.5;
+                padding-right: 56px;
+            }
+            &::before {
+                transition: all 0.6s ease-out;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 18px;
+                right: 22px;
+                background-color: $tertiaryColor;
+                width: 44px;
+                height: 44px;
+                border-radius: 50%;
+            }
+            &::after {
+                content: "+";
+                position: absolute;
+                top: 19px;
+                right: 34px;
+                color: $mainColor;
+                font-family: $fontFamily;
+                font-weight: 300;
+                font-size: 35px;
+            }
+            &__text {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.8s ease;
+                color: $greyColor;
+                line-height: 1.5;
+            }
+            &.active {
+                background-color: $tertiaryColor;
+                border-color: $tertiaryColor;
+                .faq-item__text {
+                    max-height: 400px;
+                    animation: fade 0.8s ease-out;
+                    margin-top: 6px;
+                }
+                &::before {
+                    background-color: #fff;
+                }
+                &::after {
+                    content: "";
+                    top: 39px;
+                    right: 35px;
+                    background-color: $mainColor;
+                    width: 18px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .team-member {
+        .member-biography {
+            &__info {
+                flex-direction: column;
+            }
+        }
+        .member-skills {
+            max-width: 100%;
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@media (max-width: 670px) {
+    .team-member {
+        &__general {
+            flex-direction: column;
+            row-gap: 32px;
+        }
+        &__image {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: $mobileSmall) {
+    .team-member {
+        &__image {
+            width: 100%;
+        }
+    }
+}

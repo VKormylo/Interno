@@ -1,0 +1,79 @@
+// ----------------------------------------------------
+// ------------------ HERO-MAIN ------------------
+// ----------------------------------------------------
+
+.hero {
+    margin-top: 138px;
+    @include adaptiv-value("padding-top", 330, 120, $responsiveType);
+    @include adaptiv-value("padding-bottom", 330, 240, $responsiveType);
+    @include adaptiv-value("border-bottom-left-radius", 291, 180, $responsiveType);
+    &__title {
+        font-family: $fontFamilyDM;
+        font-weight: 400;
+        font-size: 85px;
+        max-width: 560px;
+        line-height: 1.25;
+        @include adaptiv-font(85, 42, $responsiveType);
+    }
+    &__text {
+        max-width: 560px;
+        color: $greyColor;
+        margin-top: 12px;
+        margin-bottom: 24px;
+        font-family: $fontFamily;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        &__button {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+// ----------------------------------------------------
+// ------------------ HERO-SUB ------------------
+// ----------------------------------------------------
+
+.hero-sub {
+    position: relative;
+    height: 356px;
+    margin-top: 138px;
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+    }
+    .current-page {
+        transform: translateY(1px);
+        padding: 41px 0;
+        @include adaptiv-value("padding-left", 152, 32, $responsiveType);
+        @include adaptiv-value("padding-right", 152, 32, $responsiveType);
+        background-color: #fff;
+        border-radius: 37px 37px 0 0;
+        text-align: center;
+        &__path {
+            color: $greyColor;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .hero-sub {
+        .current-page {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 20px 0;
+            transform: translate(0);
+            width: 100%;
+            border-radius: 0;
+            border-bottom: 2px solid $secondaryColor;
+        }
+    }
+}

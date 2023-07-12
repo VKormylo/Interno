@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("./html/head.html", { "title": "Interno" })
+  <body>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      @@include("./html/header.html", {})
+      <main class="page">
+        @@include("./html/hero-sub.html", { "name": "Professional", "path":
+        "Team Member", "photo": "team-member" })
+        <section class="team-member"></section>
+        @@include("./html/team-about.html", {}) 
+        @@include("./html/contact-project.html", {})
+      </main>
+      @@include("./html/footer.html", {})
+    </div>
+    <script src="js/app.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fc018a446d.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

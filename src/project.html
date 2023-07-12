@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include("./html/head.html", { "title": "Interno" })
+  <body>
+    <div class="wrapper">
+      <div class="overlay"></div>
+      @@include("./html/header.html", {})
+      <main class="page">
+        @@include("./html/hero-sub.html", { "name": "Project", "path":
+        "Project", "photo": "project" })
+        <section class="project">
+          <div class="project__container">
+            <div class="project__content">
+              <div class="project__info info-project">
+                <div class="info-project__client info-project__item">
+                  <div class="info-project__label">Client</div>
+                  <div class="info-project__value">Your client name</div>
+                </div>
+                <div class="info-project__category info-project__item">
+                  <div class="info-project__label">Category</div>
+                  <div class="info-project__value">Interiors</div>
+                </div>
+                <div class="info-project__tags info-project__item">
+                  <div class="info-project__label">Tags</div>
+                  <div class="info-project__value">Interior, Home</div>
+                </div>
+                <div class="info-project__date info-project__item">
+                  <div class="info-project__label">Date</div>
+                  <div class="info-project__value">Date 23.02.2022</div>
+                </div>
+                <div class="info-project__link info-project__item">
+                  <div class="info-project__label">Link</div>
+                  <a href="#" class="info-project__value">example.com</a>
+                </div>
+              </div>
+              <div class="project__description">
+                <h2 class="project__title">Minimal Look Bedrooms</h2>
+                <div class="project__text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Aliquamsem vitae turpis dignissim maximus. Aliquam
+                    sollicitudin tellumassa, vbel maximus purus posuere in.
+                    Dojrices gravida dignissim. Praesent at nibh in mi fringilla
+                    mattis. Phasellus ut dolor odio. Aenean in the ipsum vel
+                    lectus bibendum commodo.
+                  </p>
+                  <p>
+                    In nec sem suscipit, convallis leo vitae, lacinia nibh. Cras
+                    amet tellus lectus. Vivamus ipsum nunc, mattis quis nibh id,
+                    pellentesque arcu. Donec a pellentesque Cras erat enim,
+                    gravida non ante vitae,elequis convallis elit, in viverra
+                    felis. Donec ultrices tellus vitae iaculisvd porta. Proin
+                    tincidunt ligula id purus porttitor.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="project__images">
+              <div class="project__image">
+                <img src="@img/projects/project-page.jpg" alt="image" />
+              </div>
+              <div class="project__pop">
+                <img src="@img/icons/search-big.svg" alt="icon" />
+              </div>
+              <div class="project__popup">
+                <img src="" alt="image" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include("./html/footer.html", {})
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

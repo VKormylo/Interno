@@ -1,0 +1,322 @@
+// ----------------------------------------------------
+// ------------------ SERVICES-MAIN ------------------
+// ----------------------------------------------------
+
+.services {
+    margin: -50px 0 150px 0;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+    }
+    .item-services {
+        text-align: center;
+        max-width: 360px;
+        padding: 83px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-out 0s;
+        &:hover {
+            background-color: $tertiaryColor;
+            .item-services__button {
+                color: $secondaryColor;
+                &::after {
+                    margin-left: 14px;
+                }
+            }
+        }
+        &__text {
+            margin-top: 20px;
+            margin-bottom: 52px;
+            color: $greyColor;
+        }
+        &__button {
+            position: relative;
+            display: inline-block;
+            color: $greyColor;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.2s ease-out 0s;
+            padding-right: 25px;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url("../img/icons/arrow-long.svg") 0 0 no-repeat;
+                width: 20px;
+                height: 16px;
+                margin-left: 8px;
+                transition: all 0.2s ease-out 0s;
+            }
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .services {
+        &__container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .item-services {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .services {
+        &__container {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+// ----------------------------------------------------
+// ------------------ SERVICES PAGE ------------------
+// ----------------------------------------------------
+
+.how {
+    &__body {
+        padding: 160px 0;
+        background-color: $tertiaryColor;
+        border-radius: 70px;
+        @include adaptiv-value("padding-right", 120, 0, $responsiveType);
+        @include adaptiv-value("padding-left", 120, 0, $responsiveType);
+    }
+    &__items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 70px;
+        margin-top: 100px;
+    }
+    .item-how {
+        display: flex;
+        align-items: center;
+        column-gap: 51px;
+        &__image {
+            border-radius: 0 123px 0 326px;
+            overflow: hidden;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__content {
+            max-width: 456px;
+        }
+        &__icons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__number {
+            color: #fff;
+            font-size: 120px;
+            line-height: 1.25;
+            font-family: $fontFamilyDM;
+            @include adaptiv-font(120, 60, $responsiveType);
+        }
+        &__title {
+            @include adaptiv-value("margin-top", 58, 24, $responsiveType);
+            margin-bottom: 11px;
+        }
+        &__text {
+            color: $greyColor;
+            line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: $pc) {
+    .how {
+        background-color: $tertiaryColor;
+        &__body {
+            border-radius: 0;
+            background-color: transparent;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .how {
+        &__body {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .item-how {
+            flex-direction: column;
+            row-gap: 48px;
+            &__content {
+                max-width: 100%;
+            }
+            &__image {
+                order: 2;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------
+// ------------------ SERVICE PAGE ------------------
+// ----------------------------------------------------
+
+.trends {
+    &__container {
+        display: flex;
+        column-gap: 97px;
+    }
+    &__title {
+        text-transform: none;
+    }
+    &__content {
+        max-width: 655px;
+        line-height: 1.5;
+    }
+    &__subtitle {
+        font-size: 25px;
+        color: $secondaryColor;
+        margin-bottom: 24px;
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 18px;
+    }
+}
+
+// PROCESS
+
+.process {
+    &__video {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 70px;
+        overflow: hidden;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            z-index: 5;
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+    &__content {
+        display: flex;
+        margin-top: 150px;
+    }
+    &__column {
+        position: relative;
+        padding: 0 83px;
+        &:first-child::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background-color: #cecece;
+            width: 1px;
+            height: 250px;
+        }
+    }
+    &__label {
+        margin-bottom: 23px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+    &__item {
+        counter-increment: number;
+        color: $greyColor;
+        &::before {
+            content: counter(number);
+            font-family: $fontFamilyDM;
+            padding-right: 15px;
+            color: $secondaryColor;
+        }
+        &:first-child {
+            counter-reset: number;
+        }
+    }
+}
+
+// WORK SECTION
+
+.work.work__service {
+    .item-work {
+        column-gap: 82px;
+        &__content {
+            flex-basis: 518px;
+        }
+        &__title {
+            text-transform: none;
+        }
+    }
+}
+
+@media (max-width: 1170px) {
+    .trends {
+        &__container {
+            flex-direction: column;
+        }
+        &__content {
+            max-width: 100%;
+            margin-top: 32px;
+        }
+    }
+}
+
+@media (max-width: $tablet) {
+    .process {
+        &__column {
+            padding: 0 40px;
+        }
+    }
+}
+
+@media (max-width: $mobile) {
+    .process {
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__label {
+            text-align: center;
+        }
+        &__column {
+            padding: 24px 0;
+            &:first-child {
+                padding-bottom: 40px;
+            }
+            &:first-child::after {
+                top: auto;
+                bottom: 0;
+                left: 0;
+                transform: translateY(-50%);
+                background-color: #cecece;
+                width: 100%;
+                height: 1px;
+            }
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .process {
+        &__video {
+            margin: 0 -18px;
+            border-radius: 0;
+        }
+    }
+}

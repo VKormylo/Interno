@@ -1,0 +1,169 @@
+.button {
+    position: relative;
+    display: inline-block;
+    background-color: $mainColor;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Jost";
+    transition: all 0.2s ease-out 0s;
+    border-radius: 18px;
+    &_default {
+        padding: 26px 73px 26px 54px;
+        &:hover {
+            background-color: $secondaryColor;
+            &::after {
+                filter: brightness(0.3) saturate(0%);
+            }
+        }
+    }
+    &_secondary {
+        background-color: $secondaryColor;
+        padding: 26px 63px 26px 37px;
+        color: #fff;
+        &::after {
+            filter: brightness(0.3) saturate(0%);
+        }
+        &:hover {
+            background-color: $tertiaryColor;
+            color: $mainColor;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: url("../img/icons/arrow-long.svg") 0 0 no-repeat;
+        width: 20px;
+        height: 16px;
+        margin-left: 10px;
+        transition: all 0.2s ease-out 0s;
+    }
+
+    &_arrow {
+        display: flex;
+        align-items: center;
+        padding: 26px 31px;
+        border-radius: 50%;
+        background-color: $tertiaryColor;
+        transition: all 0.3s ease-out 0s;
+        &:hover {
+            background-color: $secondaryColor;
+        }
+    }
+}
+
+.arrow_small {
+    padding: 19px 23px;
+}
+
+section:not(:last-child) {
+    // margin-bottom: 200px;
+    @include adaptiv-value("margin-bottom", 200, 80, $responsiveType);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fontFamilyDM;
+    line-height: 1.25;
+}
+
+h2 {
+    text-transform: capitalize;
+    @include adaptiv-font(50, 35, $responsiveType);
+}
+
+h3 {
+    @include adaptiv-font(35, 25, $responsiveType);
+}
+
+h4 {
+    font-size: 25px;
+}
+
+.main-header {
+    text-align: center;
+    &__text {
+        max-width: 737px;
+        margin: 0 auto;
+        margin-top: 12px;
+        color: $greyColor;
+    }
+}
+
+.pagination {
+    display: flex;
+    column-gap: 20px;
+    &__item,
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $secondaryColor;
+        border-radius: 50%;
+        width: 52px;
+        height: 52px;
+        cursor: pointer;
+        &:hover,
+        &.active {
+            background-color: $tertiaryColor;
+            border-color: $tertiaryColor;
+        }
+    }
+    &__item {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+}
+
+.info-actions {
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+        }
+    }
+    &__social {
+        margin-top: 47px;
+        display: flex;
+        column-gap: 35px;
+    }
+}
+
+.social {
+    &__link {
+        transition: all 0.2s ease-out 0s;
+        &:hover {
+            color: $secondaryColor;
+        }
+    }
+}
+
+.overlay.active {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $mainColor;
+    width: 100%;
+    height: 100%;
+    z-index: 7;
+    opacity: 0.6;
+}
