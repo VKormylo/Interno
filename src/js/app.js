@@ -480,7 +480,7 @@ function visitPost(e) {
   if (!postItem) return;
   const postTitle = postItem.querySelector(".item-blog__title").textContent;
   const postDate = postItem.querySelector(".item-blog__date").textContent;
-  const postImage = postItem.querySelector(".item-blog__image>img").src;
+  const postImage = postItem.querySelector(".item-blog__image>picture>img").src;
   // Get name of image src (between last / and .jpg - f.e. 01)
   const postImageSrc = postImage.slice(
     postImage.lastIndexOf("/") + 1,
@@ -501,7 +501,8 @@ function visitPost(e) {
 function initPost() {
   const postTitle = document.querySelector(".post-main__title");
   const postDate = document.querySelector(".post-main__date");
-  const postImage = document.querySelector(".post-main__image>img");
+  const postImage = document.querySelector(".post-main__image>picture>img");
+  const postSourceImg = document.querySelector(".post-main__image>picture>source");
   const navTags = document.querySelectorAll(".nav-tags__item");
   const activeTag = document.querySelector(".post-tags__item.active");
   const contactTitle = document.querySelector(".contact__title");
@@ -510,6 +511,7 @@ function initPost() {
   postTitle.textContent = post.title;
   postDate.textContent = post.date;
   postImage.src = post.src;
+  postSourceImg.srcset = post.src;
   navTags.forEach((tag) => {
     // Show active tags and hide others
     tag.textContent.toLowerCase() === post.tag

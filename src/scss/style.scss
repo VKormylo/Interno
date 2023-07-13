@@ -3,7 +3,8 @@
 
 // Підключення шрифтів
 // &display=swap - додати при підключенні через плагін
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display:regular,italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Jost:300,regular,500,600,700&display=swap");
 
 // Підключити якщо є локальні файли шрифтів
 // import "fonts/fonts";
@@ -108,8 +109,8 @@ body {
 
 .hero {
     background: url("@img/hero.jpg") no-repeat;
-    background-position-y: 48%;
-    background-size: cover;
+    background-position-y: 48% !important;
+    background-size: cover !important;
 }
 
 // Changing background of hero for every page
