@@ -144,7 +144,7 @@ function initProject() {
 }
 
 const projectPop = document.querySelector(".project__pop");
-const projectImage = document.querySelector(".project__image>img");
+const projectImage = document.querySelector(".project__image>picture>img");
 projectPop?.addEventListener("click", togglePopup);
 
 function togglePopup() {

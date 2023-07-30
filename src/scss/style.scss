@@ -346,6 +346,7 @@ body {
             overflow: hidden;
             transition: all 0.8s ease;
             color: $greyColor;
+            line-height: 1.5;
         }
         &.active .accordion__label {
             color: $secondaryColor;

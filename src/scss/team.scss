@@ -220,6 +220,7 @@
         margin-top: 30px;
         margin-bottom: 32px;
         color: $greyColor;
+        line-height: 1.5;
     }
     .info-actions {
         &__item {
@@ -237,6 +238,7 @@
             margin-top: 18px;
             margin-bottom: 45px;
             color: $greyColor;
+            line-height: 1.5;
         }
         &__info {
             display: flex;
@@ -252,6 +254,7 @@
             margin-top: 12px;
             margin-bottom: 30px;
             color: $greyColor;
+            line-height: 1.5;
         }
         &__items {
             display: flex;
@@ -308,14 +311,6 @@
                     border-radius: 50%;
                 }
             }
-            // &:nth-child(1) .skills-item__bar {
-            //     &::before {
-            //         width: attr(data-percents);
-            //     }
-            //     &::after {
-            //         left: attr(data-percents);
-            //     }
-            // }
         }
     }
     .member-faq {

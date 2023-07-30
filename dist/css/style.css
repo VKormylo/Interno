@@ -206,6 +206,7 @@ h4 {
   margin: 0 auto;
   margin-top: 12px;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .pagination {
@@ -479,6 +480,7 @@ h4 {
   margin-top: 20px;
   margin-bottom: 52px;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .services .item-services__button {
@@ -742,6 +744,7 @@ h4 {
   margin-top: 32px;
   margin-bottom: 46px;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .about-main__call {
@@ -1079,6 +1082,7 @@ h4 {
 
 .testimonial .item-testimonial__text {
   margin-top: 24px;
+  line-height: 1.5;
 }
 
 .item-project__content {
@@ -1263,6 +1267,7 @@ h4 {
           flex-direction: column;
   row-gap: 18px;
   margin-top: 11px;
+  line-height: 1.5;
 }
 
 .project__images {
@@ -1570,6 +1575,7 @@ h4 {
   row-gap: 24px;
   margin-top: 48px;
   margin-bottom: 35px;
+  line-height: 1.5;
 }
 
 .post__container .post-main__review {
@@ -2386,6 +2392,7 @@ h4 {
   margin-top: 30px;
   margin-bottom: 32px;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .team-member .info-actions__item div {
@@ -2408,6 +2415,7 @@ h4 {
   margin-top: 18px;
   margin-bottom: 45px;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .team-member .member-biography__info {
@@ -2435,6 +2443,7 @@ h4 {
   margin-top: 12px;
   margin-bottom: 30px;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .team-member .member-skills__items {
@@ -2928,6 +2937,7 @@ h4 {
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
   color: #4d5053;
+  line-height: 1.5;
 }
 
 .faq .accordion.active .accordion__label {
